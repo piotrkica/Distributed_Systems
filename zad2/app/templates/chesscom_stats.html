@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Player stats</title>
+    </head>
+
+    <body>
+        <h1>Player stats chess.com:</h1>
+
+        <b>Id</b> {{ player_id }}<br>
+        <b>User name</b> {{ username }}<br>
+        <b>Rating-bullet</b> {{ chess_bullet.last.rating }}<br>
+        <b>Rating-blitz</b> {{ chess_blitz.last.rating }}<br>
+        <b>Rating-rapid</b> {{ chess_rapid.last.rating }}<br>
+
+        <h3>Most common openings (descending): {{ openings }}</h3>
+
+
+        <b>Url</b> <a href={{ url }}>{{ url }}</a><br>
+    </body>
+
+</html>

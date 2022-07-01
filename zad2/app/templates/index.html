@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Chess players search engine</title>
+    </head>
+    <body>
+    <h1>Find a player on lichess or chess.com:</h1>
+    </body>
+
+    <br><b>Try searching: Hikaru(chess.com), DrNykterstein(lichess), GyobuOniwa(both) </b><br>
+
+    <form action="user_stats" method="post">
+        USER NAME <br><input type="text" name="user_name"><br>
+        Lichess api (unlike chess.com) throttles game downloading to ~30games per second<br>
+        How many games should I check from lichess.com (in total):<br>
+        <input type="number" name="n_games" value=50><br>
+        How many games should I check from chess.com? (in months from now): <br>
+        <input type="number" name="n_months" value=12><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Player stats</title>
+    </head>
+
+    <body>
+        <h1>Player stats lichess.com:</h1>
+
+        <b>Id</b> {{ id }}<br>
+        <b>User name</b> {{ username }}<br>
+        <b>Online</b> {{ online }}<br>
+        <b>Rating-bullet</b> {{ perfs.bullet.rating }}<br>
+        <b>Rating-blitz</b> {{ perfs.blitz.rating }}<br>
+        <b>Rating-rapid</b> {{ perfs.rapid.rating }}<br>
+
+        <h3>Most common openings (descending): {{ openings }}</h3>
+
+        <b>Url</b> <a href={{ url }}>{{ url }}</a><br>
+    </body>
+
+</html>
