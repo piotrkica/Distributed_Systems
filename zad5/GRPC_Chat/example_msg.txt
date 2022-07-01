@@ -1,0 +1,2 @@
+test message --priority 10 --reply 2 --image C:\Users\Piotrek\Desktop\images.png
+test another message --reply 5

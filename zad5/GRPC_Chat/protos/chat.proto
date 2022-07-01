@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+//import "google/protobuf/timestamp.proto";
+
+package grpc;
+
+
+service Chat{
+  rpc send_msg(Msg) returns (Empty)  {};
+
+  rpc receive_msg(Greeting) returns (stream Msg) {};
+
+  rpc client_update(Greeting) returns (Empty) {};
+}
+
+message B64Image {
+    string b64image = 1;
+    optional string mimeType = 2;
+}
+
+message Greeting{
+    string nick = 1;
+    optional string group = 2;
+    int32 last_ack = 3;
+}
+
+
+message Msg {
+    optional int32 msgID = 1;
+    int32 timestamp = 2;
+    string nick = 3;
+    string content = 4;
+    optional B64Image image = 5;
+    optional string priority = 6;
+    optional string replyID = 7;
+}
+
+
+
+message Empty {
+
+}
